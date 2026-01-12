@@ -36,10 +36,29 @@ etc
 - **QEMU** (untuk testing/emulasi)
 - **Make**
 
-### Install di Arch Linux:
+### Install di Linux:
 
 ```bash
+#Arch Base
 sudo pacman -S nasm gcc ld qemu-system-x86 make
+
+#Debian / Ubuntu / Base
+sudo apt install nasm gcc binutils qemu-system-x86 make
+
+#Gento
+sudo emerge --ask sys-devel/gcc sys-devel/binutils dev-lang/nasm app-emulation/qemu sys-devel/make
+
+#Fedora base
+sudo dnf install nasm gcc binutils qemu-system-x86 make
+
+#openSUSE
+sudo zypper install nasm gcc binutils qemu-x86 make
+
+#alphine linux
+sudo apk add nasm gcc binutils qemu-system-x86_64 make
+
+#Void linux
+sudo xbps-install -S nasm gcc binutils qemu make
 ```
 
 Jika perlu cross-compiler:
@@ -55,6 +74,25 @@ nasm -f bin kernel_simple.asm -o kernel_simple.bin
 cat boot.bin kernel_simple.bin > akromos.img
 truncate -s 1474560 akromos.img
 qemu-system-i386 -fda akromos.img
+```
+## jika anda pake Windows 11/10
+1️⃣ Install MSYS2
+
+Download:
+https://www.msys2.org
+
+2️⃣ Buka MSYS2 MinGW64
+```bash
+pacman -Syu
+
+#after that
+pacman -S \
+  mingw-w64-x86_64-gcc \
+  mingw-w64-x86_64-nasm \
+  mingw-w64-x86_64-binutils \
+  mingw-w64-x86_64-qemu \
+  make
+
 ```
 ## Commands yang tersedia
 
