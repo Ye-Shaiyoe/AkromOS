@@ -141,9 +141,9 @@ gcc -m32 --version
 Jika tidak support, install `gcc-multilib` atau gunakan cross-compiler `i686-elf-gcc`.
 
 ### OS tidak boot di QEMU
-- Pastikan `AkromOS.img` terbuat dengan benar
+- Pastikan `akromos.img` terbuat dengan benar
 - Cek bootloader signature (0xAA55) ada di byte terakhir boot sector
-- Jalankan dengan `-d int` untuk debug: `qemu-system-i386 -fda AkromOS.img -d int`
+- Jalankan dengan `-d int` untuk debug: `qemu-system-i386 -fda akromos.img`
 
 ## Pengembangan Lanjutan
 
