@@ -16,7 +16,7 @@ Operating system sederhana yang ditulis dalam Assembly dan C untuk arsitektur x8
 ## Struktur File
 
 ```
-simpleos/
+AkromOS/
 ├── boot.asm           # Bootloader (16-bit real mode → 32-bit protected mode)
 ├── kernel_entry.asm   # Entry point kernel
 ├── kernel.c           # Kernel utama (C)
@@ -58,11 +58,11 @@ qemu-system-i386 -fda akromos.img
 ```
 ## Commands yang tersedia
 
-Setelah boot, SimpleOS akan menampilkan shell prompt (`$`). Commands yang tersedia:
+Setelah boot, AkromOS akan menampilkan shell prompt (`$`). Commands yang tersedia:
 
 - `help` - Menampilkan daftar command
 - `clear` - Clear screen
-- `about` - Informasi tentang SimpleOS
+- `about` - Informasi tentang AkromOS
 - `echo [text]` - Echo text yang diinput
 
 ## Cara Kerja
@@ -103,9 +103,9 @@ gcc -m32 --version
 Jika tidak support, install `gcc-multilib` atau gunakan cross-compiler `i686-elf-gcc`.
 
 ### OS tidak boot di QEMU
-- Pastikan `simpleos.img` terbuat dengan benar
+- Pastikan `AkromOS.img` terbuat dengan benar
 - Cek bootloader signature (0xAA55) ada di byte terakhir boot sector
-- Jalankan dengan `-d int` untuk debug: `qemu-system-i386 -fda simpleos.img -d int`
+- Jalankan dengan `-d int` untuk debug: `qemu-system-i386 -fda AkromOS.img -d int`
 
 ## Pengembangan Lanjutan
 
@@ -131,4 +131,4 @@ Free to use and modify for educational purposes.
 
 ---
 
-**SimpleOS v1.0** - A minimal operating system for learning OS development
+**AkromOS v1.0** - A minimal operating system for learning OS development
