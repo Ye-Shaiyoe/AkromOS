@@ -599,7 +599,7 @@ key_buffer: db 0
 
 prompt: db '$ ', 0
 msg_welcome: db '====================================', 10
-            db '   Welcome to AkromOS v1.1!', 10
+            db '   Welcome to AkromOS v1.0!', 10
             db '   [Timer Interrupt + Clock]', 10
             db '====================================', 10, 10, 0
 msg_line: db '------------------------------------', 10, 0
